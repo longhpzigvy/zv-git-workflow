@@ -198,11 +198,11 @@ git commit ...
 9. Change existed branch name
 ```
 git branch -m [old_branch_name] [new_branch_name]
-
 ```
+
 10. Change commit message of lastest commit
 ```
-git commit --amend
+git commit --amend -m "New message"
 git push -f // After edited, if the commit was pushed to remote we should run push force
 ```
 
