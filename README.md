@@ -45,6 +45,10 @@ git checkout -b branch_name
 Suggested branch naming convension is:
    - Issue number. i.e: issue_123
    - Feature name. i.e: feature/implement_login
+   - If the issue is to fix a bug from the previous task. Add `fixbug` or `fix` prefix and then followed by the old branch name. i.e:
+     - `fix/issue_123`
+     - `fixbug/implement_login`
+   - If the issue is to fix a bug but it doesn't from the previous task. Then consider it likes other normal issue
 2. Add **all** new files or new update to git tracker
 ```
 git add -A
@@ -85,6 +89,11 @@ git checkout master
 git pull upstream master --rebase
 
 git push origin master
+```
+
+7. Remove the old branch from local
+```
+git branch -D branch_name
 ```
 
 ## Git workflow when a task is waiting for another one
@@ -161,7 +170,6 @@ git reset
 - [Read More](https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git)
 
 6. Get a specific commit from `branch_a` to `branch_b`
-
 ```
 git checkout branch_a
 git log // checking for the commit hash
@@ -186,20 +194,19 @@ git reset --soft HEAD~n
 // edit
 git commit ...
 ```
-8. Change existed branch name
+
+9. Change existed branch name
 ```
 git branch -m [old_branch_name] [new_branch_name]
 
 ```
-9. Change commit message of lastest commit
+10. Change commit message of lastest commit
 ```
 git commit --amend
 git push -f // After edited, if the commit was pushed to remote we should run push force
 ```
 
-
-9. Get a range of commits from `branch_a` to `branch_b`
-
+11. Get a range of commits from `branch_a` to `branch_b`
 ```
 git checkout branch_a
 git log // checking for the commit hash
