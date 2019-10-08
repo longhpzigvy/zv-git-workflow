@@ -5,7 +5,7 @@
   - [Content](#content)
   - [Setup](#setup)
   - [Straight Forward Workflow](#straight-forward-workflow)
-  - [Git workflow when a task is waiting for another one](#git-workflow-when-a-task-is-waiting-for-another-one)
+  - [Fork & Pull Request Workflow](#fork--pull-request-workflow)
   - [Other scenario](#other-scenario)
 
 ## Setup
@@ -96,7 +96,10 @@ git push origin master
 git branch -D branch_name
 ```
 
-## Git workflow when a task is waiting for another one
+## Fork & Pull Request Workflow
+
+The workflow is helpful when a task is waiting for another one.
+
 Assuming that you have 2 tasks A and B. B is blocked by A. Meaning that you have wait for A to be merged before doing B. But to reduce the wait time, we will do B while waiting for A to be merged with the following step
 
 (Complete the A task with the workflow described above)
