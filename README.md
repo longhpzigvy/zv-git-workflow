@@ -213,6 +213,9 @@ git log // checking for the commit hash
 
 git checkout branch_b
 git cherry-pick [start_6_digits_from_the_hash]...[end_6_digits_from_the_hash]
+                        (exclusive)                   (inclusive)
+git cherry-pick [start_6_digits_from_the_hash]^...[end_6_digits_from_the_hash]
+                        (inclusive)                   (inclusive)
 
 // i.e: git cherry-pick 123456...999999
 // note that, start and end commit must be linear and continouse
